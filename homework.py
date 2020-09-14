@@ -68,6 +68,7 @@ def send_message(message):
 def main():
     logger = set_logger()
     current_timestamp = int(time.time())
+    send_message(f'Бот запущен {time.ctime(current_timestamp)}')
     while True:
         try:
             new_homework = get_homework_statuses(current_timestamp)
