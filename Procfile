@@ -1,2 +1,2 @@
 worker: python homework.py
-heroku ps:scale bot=1
+heroku ps:scale worker=1
