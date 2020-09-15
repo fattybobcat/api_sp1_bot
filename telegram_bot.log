@@ -27,3 +27,34 @@ UnboundLocalError: local variable 'e' referenced before assignment
 2020-09-14 13:06:35,950 - telegramBot - INFO - Program started
 2020-09-14 13:24:38,063 - telegramBot - INFO - Program started
 2020-09-15 09:26:39,064 - telegramBot - INFO - Program started
+2020-09-15 12:51:34,411 - telegramBot - INFO - Program started
+2020-09-15 12:51:34,411 - telegramBot - INFO - Program started
+2020-09-15 12:51:34,411 - telegramBot - INFO - Program started
+2020-09-15 12:59:34,463 - telegramBot - INFO - Program started
+2020-09-15 12:59:50,083 - telegramBot - INFO - Program started
+2020-09-15 12:59:50,083 - telegramBot - INFO - Program started
+2020-09-15 12:59:50,083 - telegramBot - INFO - Program started
+2020-09-15 13:11:36,608 - telegramBot - INFO - Program started
+2020-09-15 13:11:36,608 - telegramBot - INFO - None homework or status, trouble with server
+2020-09-15 13:11:36,608 - telegramBot - INFO - Program started
+2020-09-15 13:11:36,608 - telegramBot - INFO - Program started
+2020-09-15 13:11:36,608 - telegramBot - INFO - None homework or status, trouble with server
+2020-09-15 13:11:36,608 - telegramBot - INFO - None homework or status, trouble with server
+2020-09-15 13:11:39,776 - telegramBot - INFO - Program started
+2020-09-15 13:12:04,244 - telegramBot - INFO - Program started
+2020-09-15 13:12:04,986 - telegramBot - INFO - debug!, {'id': 43289, 'status': 'rejected', 'homework_name': 'fattybobcat__api_sp1_bot.zip', 'reviewer_comment': '', 'date_updated': '2020-09-15T09:37:36Z', 'lesson_name': 'Личный бот-ассистент'}
+2020-09-15 13:12:04,986 - telegramBot - INFO - Program started
+2020-09-15 13:12:04,986 - telegramBot - INFO - Program started
+2020-09-15 13:12:04,986 - telegramBot - INFO - None homework or status, trouble with server
+2020-09-15 13:12:04,986 - telegramBot - INFO - None homework or status, trouble with server
+2020-09-15 13:13:13,303 - telegramBot - INFO - Program started
+2020-09-15 13:17:47,630 - telegramBot - INFO - Program started
+2020-09-15 13:17:51,108 - telegramBot - INFO - Program started
+2020-09-15 13:18:56,134 - telegramBot - INFO - Program started
+2020-09-15 13:18:57,028 - telegramBot - INFO - DEBUG! STATUS INFO, {'id': 43289, 'status': 'rejected', 'homework_name': 'fattybobcat__api_sp1_bot.zip', 'reviewer_comment': '', 'date_updated': '2020-09-15T09:37:36Z', 'lesson_name': 'Личный бот-ассистент'}
+2020-09-15 13:18:57,029 - telegramBot - INFO - Program started
+2020-09-15 13:18:57,029 - telegramBot - INFO - Program started
+2020-09-15 13:18:57,029 - telegramBot - ERROR - None homework or status, trouble with server, {'id': 43289, 'status': 'rejected', 'homework_name': 'fattybobcat__api_sp1_bot.zip', 'reviewer_comment': '', 'date_updated': '2020-09-15T09:37:36Z', 'lesson_name': 'Личный бот-ассистент'}, error: <class 'TypeError'>
+2020-09-15 13:18:57,029 - telegramBot - ERROR - None homework or status, trouble with server, {'id': 43289, 'status': 'rejected', 'homework_name': 'fattybobcat__api_sp1_bot.zip', 'reviewer_comment': '', 'date_updated': '2020-09-15T09:37:36Z', 'lesson_name': 'Личный бот-ассистент'}, error: <class 'TypeError'>
+2020-09-15 13:20:20,735 - telegramBot - INFO - Program started
+2020-09-15 13:20:21,615 - telegramBot - INFO - DEBUG! STATUS INFO, {'id': 43289, 'status': 'rejected', 'homework_name': 'fattybobcat__api_sp1_bot.zip', 'reviewer_comment': '', 'date_updated': '2020-09-15T09:37:36Z', 'lesson_name': 'Личный бот-ассистент'}

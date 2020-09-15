@@ -23,26 +23,24 @@ def set_logger():
                                   '%(levelname)s - %(message)s')
     fh.setFormatter(formatter)
     logger.addHandler(fh)
-    logger.info('Program started')
     return logger
 
 
 def parse_homework_status(homework):
-    global logger
+    logger = set_logger()
     try:
         homework_name = homework.get('homework_name')
-        if homework_name is not None:
-            if homework['status'] != 'approved':
-                verdict = 'К сожалению в работе нашлись ошибки.'
-            else:
-                verdict = ('Ревьюеру всё понравилось, '
-                           'можно приступать к следующему уроку.')
-            return f'У вас проверили работу "{homework_name}"!\n\n{verdict}'
-        else:
+        homework_status = homework.get('status')
+        if homework_name is None or homework_status is None:
             raise TypeError
     except TypeError:
-        logger.info('None homework, trouble with server')
-
+        logger.error(f'None homework or status, trouble with server, {homework}, error: {TypeError}')
+    if homework_status != 'approved':
+        verdict = 'К сожалению в работе нашлись ошибки.'
+    else:
+        verdict = ('Ревьюеру всё понравилось, '
+                   'можно приступать к следующему уроку.')
+    return f'У вас проверили работу "{homework_name}"!\n\n{verdict}'
 
 def get_homework_statuses(current_timestamp):
     if current_timestamp is None:
@@ -55,10 +53,9 @@ def get_homework_statuses(current_timestamp):
             url_yapraktikum,
             headers=headers,
             params=params,)
-        return homework_statuses.json()
     except requests.exceptions.RequestException as e:
-        logger.info(f'Errors on server: {e}')
-
+        logger.error(f'Errors on server: {e}')
+    return homework_statuses.json()
 
 def send_message(message):
     bot = telegram.Bot(token=TELEGRAM_TOKEN)
@@ -67,13 +64,14 @@ def send_message(message):
 
 def main():
     logger = set_logger()
+    logger.info('Program started')
     current_timestamp = int(time.time())
     send_message(f'Бот запущен {time.ctime(current_timestamp)}')
     while True:
         try:
             new_homework = get_homework_statuses(current_timestamp)
             if new_homework.get('homeworks'):
-                logger.info(f'debug!, {new_homework.get("homeworks")[0]}')
+                logger.info(f'DEBUG! STATUS INFO, {new_homework.get("homeworks")[0]}')
                 send_message(
                     parse_homework_status(new_homework.get('homeworks')[0])
                 )
@@ -82,7 +80,7 @@ def main():
         except Exception as e:
             print(f'Бот упал с ошибкой: {e}')
             logger.exception(f'Exeption!, {e}')
-            time.sleep(5)
+            time.sleep(60)
             continue
 
 
